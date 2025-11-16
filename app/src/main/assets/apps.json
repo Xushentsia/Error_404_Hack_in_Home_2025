@@ -1,0 +1,91 @@
+[
+  {
+    "id": "zaryadka",
+    "name": "Зарядка",
+    "description": "Утренняя зарядка для энергии на весь день",
+    "icon": "app_zaryadka",
+    "category": "Здоровье",
+    "rating": "4.6",
+    "developer": "FitApp",
+    "age_rating": "0+",
+    "screenshots": ["zaryadka_screen1", "zaryadka_screen2"]
+  },
+  {
+    "id": "meditaciya",
+    "name": "Медитация",
+    "description": "Расслабление и осознанность за 10 минут",
+    "icon": "app_meditaciya",
+    "category": "Здоровье",
+    "rating": "4.8",
+    "developer": "MindSpace",
+    "age_rating": "0+",
+    "screenshots": ["meditaciya_screen1", "meditaciya_screen2"]
+  },
+  {
+    "id": "podbor_1",
+    "name": "Утро",
+    "description": "Подборки для утреннего старта",
+    "icon": "podbor_1",
+    "category": "Подборки",
+    "rating": "4.7",
+    "developer": "RuStore",
+    "age_rating": "0+",
+    "screenshots": []
+  },
+  {
+    "id": "podbor_2",
+    "name": "Работа",
+    "description": "Инструменты для продуктивности",
+    "icon": "podbor_2",
+    "category": "Подборки",
+    "rating": "4.5",
+    "developer": "RuStore",
+    "age_rating": "0+",
+    "screenshots": []
+  },
+  {
+    "id": "podbor_3",
+    "name": "Отдых",
+    "description": "Развлечения и релаксация",
+    "icon": "podbor_3",
+    "category": "Подборки",
+    "rating": "4.8",
+    "developer": "RuStore",
+    "age_rating": "12+",
+    "screenshots": []
+  },
+  {
+    "id": "podbor_4",
+    "name": "Новое",
+    "description": "Свежие новинки",
+    "icon": "podbor_4",
+    "category": "Подборки",
+    "rating": "4.9",
+    "developer": "RuStore",
+    "age_rating": "0+",
+    "screenshots": []
+  },
+  {
+    "id": "vk_video",
+    "name": "VK Видео: кино, сериалы, ТВ и мультфильмы",
+    "description": "Смотри кино, мультики, сериалы, ТВ онлайн, спортивные трансляции и фильмы бесплатно на всех устройствах: от смартфона до телевизора.",
+    "icon": "demo_vk_video",
+    "category": "Развлечения",
+    "rating": "4.5",
+    "developer": "VK",
+    "age_rating": "12+",
+    "screenshots": ["vk_screen1", "vk_screen2", "vk_screen3"]
+  },
+  {
+    "id": "demo_book",
+    "name": "Яндекс Книги",
+    "description": "Яндекс Книги — лёгкий способ читать и слушать книжные новинки и бестселлеры в удобном приложении",
+    "icon": "demo_book",
+    "category": "Книги",
+    "rating": "3.7",
+    "developer": "Яндекс",
+    "age_rating": "0+",
+    "screenshots": ["book_screen1", "book_screen2"],
+    "is_demo": true
+  }
+]

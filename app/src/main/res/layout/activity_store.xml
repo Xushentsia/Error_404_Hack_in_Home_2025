@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ШАПКА -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <!-- ПОИСК -->
+                <ImageView
+                    android:id="@+id/btn_logo"
+                    android:layout_width="240dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/btn_search"
+                    android:background="@drawable/shape_rounded_square"
+                    android:outlineProvider="bounds"
+                    android:scaleType="centerInside"
+                    android:clipToOutline="true"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- ПРОСТРАНСТВО -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- АВАТАР -->
+                <ImageView
+                    android:id="@+id/btn_login"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/avatar_placeholder"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/shape_rounded_square"
+                    android:clipToOutline="true" />
+
+            </LinearLayout>
+
+            <!-- ЛИНИЯ ФИЛЬТРОВ -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btn_filters"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_filters" />
+
+                    <!-- КНОПКИ ФИЛЬТРОВ -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_filter_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#CCE4FF"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Маркетплейсы"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        app:cornerRadius="15dp"
+                        app:strokeColor="#0077FF"
+                        app:strokeWidth="2dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_filter_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="#CCE4FF"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Разработчикам"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        app:cornerRadius="15dp"
+                        app:strokeColor="#0077FF"
+                        app:strokeWidth="2dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_filter_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="#CCE4FF"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Новинки"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        app:cornerRadius="15dp"
+                        app:strokeColor="#0077FF"
+                        app:strokeWidth="2dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Актуальное для Вас -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shape_block_border"
+                android:clipToOutline="true"
+                android:elevation="15dp"
+                android:orientation="horizontal"
+                android:outlineProvider="bounds"
+                android:padding="16dp">
+
+                <!-- ЛЕВАЯ ЧАСТЬ: ТЕКСТ -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_greeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#CCE4FF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Актуальное для Вас"
+                        android:textColor="#CCE4FF"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- ПРАВАЯ ЧАСТЬ: 2 ПРИЛОЖЕНИЯ -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- ПРИЛОЖЕНИЕ 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_zaryadka"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/shape_rounded_square"
+                            android:clipToOutline="true"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/tv_zaryadka"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text=""
+                            android:textColor="#CCE4FF"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <!-- ПРИЛОЖЕНИЕ 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_meditaciya"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/shape_rounded_square"
+                            android:clipToOutline="true"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/tv_meditaciya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text=""
+                            android:textColor="#CCE4FF"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- БЛОК: Главные подборки -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shape_block_border"
+                android:clipToOutline="true"
+                android:elevation="15dp"
+                android:orientation="vertical"
+                android:outlineProvider="bounds"
+                android:padding="16dp">
+
+                <!-- ЗАГОЛОВОК -->
+                <RelativeLayout
+                    android:id="@+id/header_podbor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_title_podbor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Главные подборки"
+                        android:textColor="#CCE4FF"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_all_podbor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="sans-serif"
+                        android:text="все →"
+                        android:textColor="#CCE4FF"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <!-- 4 ИКОНКИ ПОДБОРОК -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_podbor_1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="0dp"
+                        android:background="@drawable/shape_rounded_square"
+                        android:clipToOutline="true"
+                        android:scaleType="centerCrop"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/iv_podbor_2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/shape_rounded_square"
+                        android:clipToOutline="true"
+                        android:scaleType="centerCrop"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/iv_podbor_3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/shape_rounded_square"
+                        android:clipToOutline="true"
+                        android:scaleType="centerCrop"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/iv_podbor_4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="0dp"
+                        android:background="@drawable/shape_rounded_square"
+                        android:clipToOutline="true"
+                        android:scaleType="centerCrop"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        <!-- БЛОК: Живые демо-версии -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/shape_block_border"
+            android:outlineProvider="bounds"
+            android:elevation="15dp"
+            android:clipToOutline="true">
+
+            <!-- ЗАГОЛОВОК С КНОПКОЙ "ВСЕ" СПРАВА -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Живые демо-версии"
+                    android:textSize="20sp"
+                    android:textColor="#CCE4FF"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/tv_all_demo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="sans-serif"
+                    android:text="все →"
+                    android:textColor="#CCE4FF"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+            </RelativeLayout>
+
+            <!-- КАРТОЧКА ПРИЛОЖЕНИЯ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:clipToOutline="true"
+                android:outlineProvider="bounds">
+
+                <!-- СКРИНШОТ -->
+                <ImageView
+                    android:id="@+id/demo_screenshot"
+                    android:layout_width="100dp"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true" />
+
+                <!-- ИНФОРМАЦИЯ -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <!-- НАЗВАНИЕ -->
+                    <TextView
+                        android:id="@+id/tv_demo_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#F0F7FF"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+                    <!-- ОПИСАНИЕ -->
+                    <TextView
+                        android:id="@+id/tv_demo_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#F0F7FF"
+                        android:textSize="13sp"
+                        android:layout_marginTop="6dp"
+                        android:maxLines="4"
+                        android:ellipsize="end"/>
+
+                    <!-- РЕЙТИНГ -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_star"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/tv_demo_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#FFD700"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_comment"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="999"
+                            android:textColor="#888"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- КНОПКА -->
+                    <ImageView
+                        android:id="@+id/btn_try"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/btn_try"
+                        android:layout_marginTop="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- ФУТЕР -->
+    <LinearLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@drawable/footer_background_blur"
+        android:elevation="24dp">
+
+        <!-- ЛИНИЯ -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF" />
+
+        <!-- КНОПКИ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp">
+
+            <ImageView
+                android:id="@+id/btn_feed"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/btn_feed"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageView
+                android:id="@+id/btn_apps"
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:src="@drawable/btn_apps"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:elevation="6dp" />
+
+            <ImageView
+                android:id="@+id/btn_kiosk"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:src="@drawable/btn_kiosk"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
